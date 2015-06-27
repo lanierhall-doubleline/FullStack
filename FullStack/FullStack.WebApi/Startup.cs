@@ -44,7 +44,7 @@ namespace FullStack.WebApi
             app.UseFileServer(new FileServerOptions
             {
                 RequestPath = new PathString(string.Empty),
-                FileSystem = new PhysicalFileSystem("./public"),
+                FileSystem = new PhysicalFileSystem("./"),
                 EnableDirectoryBrowsing = true,
                 
             });

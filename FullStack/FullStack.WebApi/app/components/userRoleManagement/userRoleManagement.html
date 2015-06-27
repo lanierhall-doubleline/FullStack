@@ -1,0 +1,16 @@
+﻿<div>
+    <label ng-model="user.userName"></label>
+    <br />
+    <span style="width: 50%">
+        <div>Assigned Roles:</div>
+        <ul ng-repeat="userRole in user.userRoles">
+            <li ng-click="removeRole(userRole.roleId)">{{userRole.role.roleName}}</li>
+        </ul>
+    </span>
+    <span style="width: 50%">
+        <div>Available Roles:</div>
+        <ul ng-repeat="role in unauthorizedRoles">
+            <li ng-click="addRole(role.roleId)">{{role.roleName}}</li>
+        </ul>
+    </span>
+</div>

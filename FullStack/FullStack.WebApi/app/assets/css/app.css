@@ -1,0 +1,28 @@
+﻿html, body {
+    background-color: #ffffff;
+    margin: 0 0 0 0;
+    height: 100%;
+}
+
+#container {
+    width:100%;
+}
+
+#subcontainer {
+    display: table;
+}
+
+#sidebar {
+    width: 120px;
+    background-color: #009999;
+    color: white;
+    display: table-cell;
+}
+
+#pagecontainer {
+    width: 800px;
+    display: table-cell;
+    background-color: #FFFFFF;
+    color: black;
+    padding-left: 80px;
+}

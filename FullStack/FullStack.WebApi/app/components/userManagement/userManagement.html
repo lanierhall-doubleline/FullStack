@@ -1,0 +1,17 @@
+﻿<div>
+    <input type="text" ng-model="userToAdd" />
+    <button ng-click="addUser()">Add</button>
+    <ul ng-repeat="user in users">
+        <li>
+            <span ng-hide="user.editEnabled">
+                <label ng-click="user.editEnabled = true">{{user.userName}}</label>
+            </span>
+            <span ng-show="user.editEnabled">
+                <input type="text" ng-model="user.userName" />
+                <button ng-click="updateUser(user)">Update</button>
+            </span>
+            <a href="#/users/{{user.userId}}">Manage Roles</a>
+            <button ng-click="deleteUser(user.userId)">Delete</button>
+        </li>
+    </ul>
+</div>

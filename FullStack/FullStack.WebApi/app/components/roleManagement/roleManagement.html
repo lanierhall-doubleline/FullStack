@@ -1,0 +1,16 @@
+﻿<div>
+    <input type="text" ng-model="roleToAdd" />
+    <button ng-click="addRole()">Add</button>
+    <ul ng-repeat="role in roles">
+        <li>
+            <span ng-hide="role.editEnabled">
+                <label ng-click="role.editEnabled = true">{{role.roleName}}</label>
+            </span>
+            <span ng-show="role.editEnabled">
+                <input type="text" ng-model="role.roleName" />
+                <button ng-click="updateRole(role)">Update</button>
+            </span>
+            <button ng-click="deleteRole(role.roleId)">Delete</button>
+        </li>
+    </ul>
+</div>
