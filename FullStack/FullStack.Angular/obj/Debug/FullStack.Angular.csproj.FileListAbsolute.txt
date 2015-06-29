@@ -1,6 +1,0 @@
-D:\Projects\Research\FullStack\FullStack\FullStack.Angular\bin\FullStack.Angular.dll.config
-D:\Projects\Research\FullStack\FullStack\FullStack.Angular\bin\FullStack.Angular.dll
-D:\Projects\Research\FullStack\FullStack\FullStack.Angular\bin\FullStack.Angular.pdb
-D:\Projects\Research\FullStack\FullStack\FullStack.Angular\obj\Debug\FullStack.Angular.csprojResolveAssemblyReference.cache
-D:\Projects\Research\FullStack\FullStack\FullStack.Angular\obj\Debug\FullStack.Angular.dll
-D:\Projects\Research\FullStack\FullStack\FullStack.Angular\obj\Debug\FullStack.Angular.pdb
