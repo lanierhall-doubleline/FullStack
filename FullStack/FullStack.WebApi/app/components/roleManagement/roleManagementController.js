@@ -28,7 +28,7 @@
             .success(function() {
                 for (var i = 0; i < $scope.roles.length; i++)
                     if ($scope.roles[i].roleId == roleId)
-                        $scope.roles[i].splice(i, 1);
+                        $scope.roles.splice(i, 1);
             })
             .error(function(data, headers, status, config) {
                 alert(headers);

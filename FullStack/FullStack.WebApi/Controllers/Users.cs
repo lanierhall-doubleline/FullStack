@@ -23,7 +23,11 @@ namespace FullStack.WebApi.Controllers
                 return Ok(new
                 {
                     roleId = retVal.RoleId,
-                    role = new { roleName = retVal.Role.RoleName }
+                    role = new
+                    {
+                        roleId = retVal.RoleId, 
+                        roleName = retVal.Role.RoleName
+                    }
                 });
             }
         }

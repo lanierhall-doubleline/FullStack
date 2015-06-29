@@ -28,7 +28,7 @@
             .success(function () {
                 for (var i = 0; i < $scope.users.length; i++)
                     if ($scope.users[i].userId == userId)
-                        $scope.users[i].splice(i, 1);
+                        $scope.users.splice(i, 1);
             })
             .error(function (data, headers, status, config) {
                 alert(headers);
