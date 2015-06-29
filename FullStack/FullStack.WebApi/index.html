@@ -2,8 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Users</title>
-    <script src="app/assets/libs/angular.js"></script>
-    <script src="app/assets/libs/angular-route.js"></script>
+    <script src="app/assets/js/jquery-1.11.3.min.js"></script>
+    <script src="app/assets/js/angular.js"></script>
+    <script src="app/assets/js/angular-route.js"></script>
     <script src="app/module.js"></script>
     <script src="app/routes.js"></script>
     <script src="app/components/home/homeController.js"></script>
@@ -11,12 +12,22 @@
     <script src="app/components/roleManagement/roleManagementController.js"></script>
     <script src="app/components/userRoleManagement/userRoleManagementController.js"></script>
     <link rel="stylesheet" type="text/css" href="app/assets/css/app.css">
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
 </head>
     <body ng-app="fullStackApp">
         <div id="container">
             <div id="subcontainer">
-                <div id="sidebar">
-                    <a href="#/">Home</a>
+                <div id="sidebar" class="navbar navbar-inverse">
+                    <a href="#">Home</a>
                     <br />
                     <a href="#/userManagement">User Management</a>
                     <br />

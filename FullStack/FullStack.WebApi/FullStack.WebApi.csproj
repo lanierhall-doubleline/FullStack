@@ -141,8 +141,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\assets\css\app.css" />
-    <Content Include="app\assets\libs\angular-route.js" />
-    <Content Include="app\assets\libs\angular.js" />
+    <Content Include="app\assets\js\angular-route.js" />
+    <Content Include="app\assets\js\angular.js" />
+    <Content Include="app\assets\js\jquery-1.11.3.min.js" />
     <Content Include="app\components\home\home.html" />
     <Content Include="app\components\home\homeController.js" />
     <Content Include="app\components\userRoleManagement\userRoleManagement.html" />
@@ -174,7 +175,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\assets\img\" />
-    <Folder Include="app\assets\js\" />
     <Folder Include="app\shared\" />
   </ItemGroup>
   <ItemGroup>
