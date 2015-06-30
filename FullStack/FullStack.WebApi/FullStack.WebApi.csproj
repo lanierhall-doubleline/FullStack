@@ -146,6 +146,7 @@
     <Content Include="app\assets\js\jquery-1.11.3.min.js" />
     <Content Include="app\components\home\home.html" />
     <Content Include="app\components\home\homeController.js" />
+    <Content Include="app\components\userManagement\userManagementService.js" />
     <Content Include="app\components\userRoleManagement\userRoleManagement.html" />
     <Content Include="app\components\userRoleManagement\userRoleManagementController.js" />
     <Content Include="app\components\roleManagement\roleManagement.html" />

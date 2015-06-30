@@ -14,8 +14,6 @@
 
 #sidebar {
     width: 120px;
-    background-color: #00ffff;
-    color: white;
     display: table-cell;
 }
 
@@ -25,4 +23,12 @@
     background-color: #FFFFFF;
     color: black;
     padding-left: 80px;
+}
+
+.css-form input.ng-invalid.ng-touched {
+    background-color: #FA787E;
+}
+
+.css-form input.ng-valid.ng-touched {
+    background-color: #78FA89;
 }

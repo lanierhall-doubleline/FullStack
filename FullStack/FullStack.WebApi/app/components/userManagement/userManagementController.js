@@ -1,28 +1,18 @@
-﻿app.controller('userManagementController', function($scope, $http) {
-    $http.get('/api/Users')
-        .success(function(data, headers, status, config) {
-            for (var i = 0; i < data.length; i++)
-                data[i].editEnabled = false;
-            $scope.users = data;
-        })
-        .error(function(data, headers, status, config) {
-            $scope.users = [];
-            alert("Error retrieving users");
-        });
+﻿app.controller('userManagementController', function ($scope, $http, userManagementService) {
+
+    userManagementService.GetUsers().then(function (data) {
+        $scope.users = data.data;
+    });
 
     $scope.addUser = function () {
-        var user = {
-            userName: $scope.userToAdd
-        };
-        $http.post('/api/Users', user)
-            .success(function(data) {
-                $scope.users.push(data);
-            })
-            .error(function() {
-                alert("Error adding user");
+        userManagementService.addUser($scope.userToAdd)
+            .then(function (data) {
+                if(data != null)
+                    $scope.users.push(data.data);
             });
     }
 
+    //for some reason i get a 404 with the service deleteUser method
     $scope.deleteUser = function (userId) {
         $http.delete('/api/users/' + userId)
             .success(function () {
@@ -36,16 +26,13 @@
     }
     
     $scope.updateUser = function(user) {
-        $http.put('/api/users/' + user.userId, user)
-            .success(function(data) {
+        userManagementService.updateUser(user)
+            .then(function(data) {
                 for (var i = 0; i < $scope.users.length; i++)
                     if ($scope.users[i].userId == user.userId) {
-                        $scope.users[i].userName = data.userName;
+                        $scope.users[i].userName = data.data.userName;
                         $scope.users[i].editEnabled = false;
                     }
-            })
-            .error(function(data, headers, status, config) {
-                alert(headers);
             });
     }
 });

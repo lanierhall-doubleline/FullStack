@@ -1,17 +1,36 @@
 ﻿<div>
-    <input type="text" ng-model="userToAdd" />
-    <button ng-click="addUser()">Add</button>
-    <ul ng-repeat="user in users">
-        <li>
-            <span ng-hide="user.editEnabled">
-                <label ng-click="user.editEnabled = true">{{user.userName}}</label>
-            </span>
-            <span ng-show="user.editEnabled">
-                <input type="text" ng-model="user.userName" />
-                <button ng-click="updateUser(user)">Update</button>
-            </span>
-            <a href="#/users/{{user.userId}}">Manage Roles</a>
-            <button ng-click="deleteUser(user.userId)">Delete</button>
-        </li>
-    </ul>
+    <form novalidate name="userForm" class="css-form">
+        <label>Username: </label>
+        <input type="text" ng-model="userToAdd.username" required />
+        <br />
+        <label>First Name: </label>
+        <input type="text" ng-model="userToAdd.firstName" required />
+        <br />
+        <label>Last Name: </label>
+        <input type="text" ng-model="userToAdd.lastName" required />
+        <br />
+        <label>Email: </label>
+        <input type="email" ng-model="userToAdd.email" required />
+        <br />
+        <label>Date of Birth: </label>
+        <input type="date" ng-model="userToAdd.dateOfBirth" required />
+        <br />
+        <label>Salary: </label>
+        <input type="number" ng-model="userToAdd.salary" required />
+        <br />
+        <input type="submit" ng-click="addUser()" value="Add" ng-disabled="userForm.$invalid" />
+    </form>
+        <ul ng-repeat="user in users">
+            <li>
+                <span ng-hide="user.editEnabled">
+                    <label ng-click="user.editEnabled = true">{{user.userName}}</label>
+                </span>
+                <span ng-show="user.editEnabled">
+                    <input type="text" ng-model="user.userName" />
+                    <button ng-click="updateUser(user)">Update</button>
+                </span>
+                <a href="#/users/{{user.userId}}">Manage Roles</a>
+                <button ng-click="deleteUser(user.userId)">Delete</button>
+            </li>
+        </ul>
 </div>

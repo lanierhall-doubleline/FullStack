@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Microsoft.Data.Entity;
 
 namespace FullStack.Data
@@ -34,6 +35,12 @@ namespace FullStack.Data
     {
         public int UserId { get; set; }
         public string UserName { get; set; }
+
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+        public DateTime DateOfBirth { get; set; }
+        public decimal Salary { get; set; }
 
         public virtual ICollection<UserRole> UserRoles { get; set; }
     }

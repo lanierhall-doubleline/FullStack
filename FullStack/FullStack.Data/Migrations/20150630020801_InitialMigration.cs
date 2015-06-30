@@ -1,5 +1,7 @@
+using System.Collections.Generic;
 using Microsoft.Data.Entity.Relational.Migrations;
 using Microsoft.Data.Entity.Relational.Migrations.Builders;
+using Microsoft.Data.Entity.Relational.Migrations.Operations;
 
 namespace FullStack.Data.Migrations
 {
@@ -27,6 +29,11 @@ namespace FullStack.Data.Migrations
                 name: "User",
                 columns: table => new
                 {
+                    DateOfBirth = table.Column(type: "datetime2", nullable: false),
+                    Email = table.Column(type: "nvarchar(max)", nullable: true),
+                    FirstName = table.Column(type: "nvarchar(max)", nullable: true),
+                    LastName = table.Column(type: "nvarchar(max)", nullable: true),
+                    Salary = table.Column(type: "decimal(18, 2)", nullable: false),
                     UserId = table.Column(type: "int", nullable: false),
                     UserName = table.Column(type: "nvarchar(max)", nullable: true)
                 },

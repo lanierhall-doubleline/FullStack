@@ -30,12 +30,22 @@ namespace FullStack.Data.Migrations
                 
                 builder.Entity("FullStack.Data.User", b =>
                     {
+                        b.Property<DateTime>("DateOfBirth")
+                            .Annotation("OriginalValueIndex", 0);
+                        b.Property<string>("Email")
+                            .Annotation("OriginalValueIndex", 1);
+                        b.Property<string>("FirstName")
+                            .Annotation("OriginalValueIndex", 2);
+                        b.Property<string>("LastName")
+                            .Annotation("OriginalValueIndex", 3);
+                        b.Property<decimal>("Salary")
+                            .Annotation("OriginalValueIndex", 4);
                         b.Property<int>("UserId")
                             .GenerateValueOnAdd()
-                            .Annotation("OriginalValueIndex", 0)
+                            .Annotation("OriginalValueIndex", 5)
                             .Annotation("SqlServer:ValueGeneration", "Default");
                         b.Property<string>("UserName")
-                            .Annotation("OriginalValueIndex", 1);
+                            .Annotation("OriginalValueIndex", 6);
                         b.Key("UserId");
                     });
                 

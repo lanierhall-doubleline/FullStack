@@ -135,9 +135,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FullStackContext.cs" />
-    <Compile Include="Migrations\20150627224253_InitialMigration.cs" />
-    <Compile Include="Migrations\20150627224253_InitialMigration.designer.cs">
-      <DependentUpon>20150627224253_InitialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\20150630020801_InitialMigration.cs" />
+    <Compile Include="Migrations\20150630020801_InitialMigration.designer.cs">
+      <DependentUpon>20150630020801_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\FullStackContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
